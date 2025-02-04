@@ -15,7 +15,7 @@ export function NavigationMenu() {
 
   return (
     <nav className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 transform px-4 md:top-6 md:bottom-auto">
-      <div className="flex items-center gap-1 rounded-full bg-black/80 px-4 py-2 backdrop-blur-sm">
+      <div className="flex items-center gap-1 rounded-[16px] bg-[#ffffff14] px-4 py-2 backdrop-blur-sm">
         {navigationItems.map((item) => {
           const isActive = location.pathname === item.href
           const Icon = item.icon
@@ -38,9 +38,9 @@ export function NavigationMenu() {
               />
               <span
                 className={`
-                  absolute -bottom-4 text-xs opacity-0 transition-all duration-300
-                  group-hover:bottom-0 group-hover:opacity-100
-                  ${isActive && "bottom-0 opacity-100"}
+                  absolute bottom-0 text-xs opacity-0 transition-all duration-300
+                  group-hover:-bottom-8 group-hover:opacity-100
+                  ${isActive && " opacity-0"}
                   ${isActive ? "text-white" : "text-gray-400"}
                 `}
               >
